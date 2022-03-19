@@ -9,12 +9,14 @@ const CharacterById = () => {
     return axios.get(`http://localhost:3000/data/${params.id}`);
   })
   return (
-    <div>
+    <div className='container mx-auto flex flex-col h-147 bg-cyan-50 justify-center items-center'>
       {
-        <>
-          <h1>{data?.data.name}</h1>
-          <h1>{data?.data.age}</h1>
-        </>
+        <div className='h-40 w-40 bg-blue-500 flex justify-center items-center' >
+        <div> 
+          <h1 className='text-white text-2xl'>{data?.data.name}</h1>
+          <h1 className="text-white text-2xl">{data?.data.age}</h1>
+        </div>
+        </div>
       }
     </div>
   )
